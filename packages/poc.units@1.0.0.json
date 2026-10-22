@@ -1,0 +1,483 @@
+{
+  "name": "poc.units",
+  "version": "1.0.0",
+  "category": "foundation",
+  "description": "Dimensions and units: mass, volume, energy, count and amount of substance. Canonical units: kg, m3, J, item, mol.",
+  "dependencies": [],
+  "content": [
+    {
+      "key": "dim.mass",
+      "model": "Dimension",
+      "fields": {
+        "name": "Mass",
+        "symbol": "M"
+      }
+    },
+    {
+      "key": "unit.kg",
+      "model": "Unit",
+      "fields": {
+        "name": "kilogram",
+        "symbol": "kg",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": true,
+        "to_canonical_multiplier": 1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.g",
+      "model": "Unit",
+      "fields": {
+        "name": "gram",
+        "symbol": "g",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.001,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.mg",
+      "model": "Unit",
+      "fields": {
+        "name": "milligram",
+        "symbol": "mg",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1e-06,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.ug",
+      "model": "Unit",
+      "fields": {
+        "name": "microgram",
+        "symbol": "µg",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1e-09,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.t",
+      "model": "Unit",
+      "fields": {
+        "name": "tonne",
+        "symbol": "t",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.kt",
+      "model": "Unit",
+      "fields": {
+        "name": "kilotonne",
+        "symbol": "kt",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.lb",
+      "model": "Unit",
+      "fields": {
+        "name": "pound (avoirdupois)",
+        "symbol": "lb",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.45359237,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.oz",
+      "model": "Unit",
+      "fields": {
+        "name": "ounce (avoirdupois)",
+        "symbol": "oz",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.028349523125,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.short-ton",
+      "model": "Unit",
+      "fields": {
+        "name": "short ton (US)",
+        "symbol": "sh tn",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 907.18474,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.long-ton",
+      "model": "Unit",
+      "fields": {
+        "name": "long ton (UK)",
+        "symbol": "LT",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.mass"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1016.0469088,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "dim.volume",
+      "model": "Dimension",
+      "fields": {
+        "name": "Volume",
+        "symbol": "L3"
+      }
+    },
+    {
+      "key": "unit.m3",
+      "model": "Unit",
+      "fields": {
+        "name": "cubic metre",
+        "symbol": "m3",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": true,
+        "to_canonical_multiplier": 1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.dm3",
+      "model": "Unit",
+      "fields": {
+        "name": "cubic decimetre",
+        "symbol": "dm3",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.001,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.cm3",
+      "model": "Unit",
+      "fields": {
+        "name": "cubic centimetre",
+        "symbol": "cm3",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1e-06,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.l",
+      "model": "Unit",
+      "fields": {
+        "name": "litre",
+        "symbol": "L",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.001,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.ml",
+      "model": "Unit",
+      "fields": {
+        "name": "millilitre",
+        "symbol": "mL",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1e-06,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.hl",
+      "model": "Unit",
+      "fields": {
+        "name": "hectolitre",
+        "symbol": "hL",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.gal-us",
+      "model": "Unit",
+      "fields": {
+        "name": "gallon (US)",
+        "symbol": "gal (US)",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.003785411784,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.gal-uk",
+      "model": "Unit",
+      "fields": {
+        "name": "gallon (imperial)",
+        "symbol": "gal (UK)",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.00454609,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.ft3",
+      "model": "Unit",
+      "fields": {
+        "name": "cubic foot",
+        "symbol": "ft3",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.028316846592,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.bbl",
+      "model": "Unit",
+      "fields": {
+        "name": "barrel (oil)",
+        "symbol": "bbl",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.volume"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.158987294928,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "dim.energy",
+      "model": "Dimension",
+      "fields": {
+        "name": "Energy",
+        "symbol": "ML2T-2"
+      }
+    },
+    {
+      "key": "unit.j",
+      "model": "Unit",
+      "fields": {
+        "name": "joule",
+        "symbol": "J",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": true,
+        "to_canonical_multiplier": 1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.kj",
+      "model": "Unit",
+      "fields": {
+        "name": "kilojoule",
+        "symbol": "kJ",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.mj",
+      "model": "Unit",
+      "fields": {
+        "name": "megajoule",
+        "symbol": "MJ",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.gj",
+      "model": "Unit",
+      "fields": {
+        "name": "gigajoule",
+        "symbol": "GJ",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000000000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.wh",
+      "model": "Unit",
+      "fields": {
+        "name": "watt-hour",
+        "symbol": "Wh",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 3600.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.kwh",
+      "model": "Unit",
+      "fields": {
+        "name": "kilowatt-hour",
+        "symbol": "kWh",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 3600000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.mwh",
+      "model": "Unit",
+      "fields": {
+        "name": "megawatt-hour",
+        "symbol": "MWh",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.energy"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 3600000000.0,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "dim.count",
+      "model": "Dimension",
+      "fields": {
+        "name": "Item count",
+        "symbol": "1"
+      }
+    },
+    {
+      "key": "unit.item",
+      "model": "Unit",
+      "fields": {
+        "name": "item",
+        "symbol": "item",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.count"
+        },
+        "is_canonical": true,
+        "to_canonical_multiplier": 1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "dim.amount",
+      "model": "Dimension",
+      "fields": {
+        "name": "Amount of substance",
+        "symbol": "N"
+      }
+    },
+    {
+      "key": "unit.mol",
+      "model": "Unit",
+      "fields": {
+        "name": "mole",
+        "symbol": "mol",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.amount"
+        },
+        "is_canonical": true,
+        "to_canonical_multiplier": 1,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.mmol",
+      "model": "Unit",
+      "fields": {
+        "name": "millimole",
+        "symbol": "mmol",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.amount"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 0.001,
+        "to_canonical_offset": 0
+      }
+    },
+    {
+      "key": "unit.kmol",
+      "model": "Unit",
+      "fields": {
+        "name": "kilomole",
+        "symbol": "kmol",
+        "dimension": {
+          "$ref": "poc.units@1.0.0:dim.amount"
+        },
+        "is_canonical": false,
+        "to_canonical_multiplier": 1000.0,
+        "to_canonical_offset": 0
+      }
+    }
+  ]
+}
