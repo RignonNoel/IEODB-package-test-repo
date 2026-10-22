@@ -1,0 +1,361 @@
+{
+  "name": "poc.environment",
+  "version": "1.0.0",
+  "category": "foundation",
+  "description": "Environmental vocabulary: compartments, greenhouse-gas substances with their elemental composition, production factors and elementary flow types (emissions to air).",
+  "dependencies": [
+    {
+      "name": "poc.units",
+      "version": "1.0.0"
+    },
+    {
+      "name": "poc.elements",
+      "version": "1.0.0"
+    }
+  ],
+  "content": [
+    {
+      "key": "compartment.air",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Air"
+      }
+    },
+    {
+      "key": "compartment.air.urban",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Urban air",
+        "parent_compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.air"
+        }
+      }
+    },
+    {
+      "key": "compartment.air.rural",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Rural air",
+        "parent_compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.air"
+        }
+      }
+    },
+    {
+      "key": "compartment.water",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Water"
+      }
+    },
+    {
+      "key": "compartment.water.fresh",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Freshwater",
+        "parent_compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.water"
+        }
+      }
+    },
+    {
+      "key": "compartment.water.sea",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Seawater",
+        "parent_compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.water"
+        }
+      }
+    },
+    {
+      "key": "compartment.soil",
+      "model": "ElementaryFlowCompartment",
+      "fields": {
+        "name": "Soil"
+      }
+    },
+    {
+      "key": "te.co2",
+      "model": "TransformableEntity",
+      "fields": {
+        "name": "Carbon dioxide",
+        "short_name": "CO2",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.co2.molar-mass",
+      "model": "TransformableEntityConversion",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.co2"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.04401
+      }
+    },
+    {
+      "key": "te.co2.c",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.co2"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.c"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.co2.o",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.co2"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.o"
+        },
+        "quantity": 2,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "pf.co2",
+      "model": "ProductionFactor",
+      "fields": {
+        "name": "Carbon dioxide"
+      }
+    },
+    {
+      "key": "pf.co2.te",
+      "model": "ProductionFactorContainTransformableEntity",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.co2"
+        },
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.co2"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        }
+      }
+    },
+    {
+      "key": "flow.co2.air",
+      "model": "ElementaryFlowType",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.co2"
+        },
+        "compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.air"
+        }
+      }
+    },
+    {
+      "key": "te.ch4",
+      "model": "TransformableEntity",
+      "fields": {
+        "name": "Methane",
+        "short_name": "CH4",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.ch4.molar-mass",
+      "model": "TransformableEntityConversion",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.ch4"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.01604
+      }
+    },
+    {
+      "key": "te.ch4.c",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.ch4"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.c"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.ch4.h",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.ch4"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.h"
+        },
+        "quantity": 4,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "pf.ch4",
+      "model": "ProductionFactor",
+      "fields": {
+        "name": "Methane"
+      }
+    },
+    {
+      "key": "pf.ch4.te",
+      "model": "ProductionFactorContainTransformableEntity",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.ch4"
+        },
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.ch4"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        }
+      }
+    },
+    {
+      "key": "flow.ch4.air",
+      "model": "ElementaryFlowType",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.ch4"
+        },
+        "compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.air"
+        }
+      }
+    },
+    {
+      "key": "te.n2o",
+      "model": "TransformableEntity",
+      "fields": {
+        "name": "Dinitrogen monoxide",
+        "short_name": "N2O",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.n2o.molar-mass",
+      "model": "TransformableEntityConversion",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.n2o"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.044013
+      }
+    },
+    {
+      "key": "te.n2o.n",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.n2o"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.n"
+        },
+        "quantity": 2,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "te.n2o.o",
+      "model": "TransformableEntityContainConservedEntity",
+      "fields": {
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.n2o"
+        },
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.o"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "pf.n2o",
+      "model": "ProductionFactor",
+      "fields": {
+        "name": "Dinitrogen monoxide"
+      }
+    },
+    {
+      "key": "pf.n2o.te",
+      "model": "ProductionFactorContainTransformableEntity",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.n2o"
+        },
+        "transformable_entity": {
+          "$ref": "poc.environment@1.0.0:te.n2o"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        }
+      }
+    },
+    {
+      "key": "flow.n2o.air",
+      "model": "ElementaryFlowType",
+      "fields": {
+        "production_factor": {
+          "$ref": "poc.environment@1.0.0:pf.n2o"
+        },
+        "compartment": {
+          "$ref": "poc.environment@1.0.0:compartment.air"
+        }
+      }
+    }
+  ]
+}
