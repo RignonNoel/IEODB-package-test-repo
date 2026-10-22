@@ -1,0 +1,3200 @@
+{
+  "name": "poc.elements",
+  "version": "1.0.0",
+  "category": "foundation",
+  "description": "The 118 elements of the periodic table as conserved entities (key element.<symbol>), in mol, with their molar mass (mol -> kg) from the IUPAC abridged standard atomic weights. Elements without stable isotopes use the mass number of their longest-lived isotope.",
+  "dependencies": [
+    {
+      "name": "poc.units",
+      "version": "1.0.0"
+    }
+  ],
+  "content": [
+    {
+      "key": "element.h",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Hydrogen",
+        "short_name": "H",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.h.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.h"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.001008
+      }
+    },
+    {
+      "key": "element.he",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Helium",
+        "short_name": "He",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.he.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.he"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.0040026
+      }
+    },
+    {
+      "key": "element.li",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Lithium",
+        "short_name": "Li",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.li.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.li"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.00694
+      }
+    },
+    {
+      "key": "element.be",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Beryllium",
+        "short_name": "Be",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.be.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.be"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.0090122
+      }
+    },
+    {
+      "key": "element.b",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Boron",
+        "short_name": "B",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.b.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.b"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.01081
+      }
+    },
+    {
+      "key": "element.c",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Carbon",
+        "short_name": "C",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.c.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.c"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.012011
+      }
+    },
+    {
+      "key": "element.n",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Nitrogen",
+        "short_name": "N",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.n.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.n"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.014007
+      }
+    },
+    {
+      "key": "element.o",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Oxygen",
+        "short_name": "O",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.o.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.o"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.015999
+      }
+    },
+    {
+      "key": "element.f",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Fluorine",
+        "short_name": "F",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.f.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.f"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.018998
+      }
+    },
+    {
+      "key": "element.ne",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Neon",
+        "short_name": "Ne",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ne.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ne"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.02018
+      }
+    },
+    {
+      "key": "element.na",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Sodium",
+        "short_name": "Na",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.na.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.na"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.02299
+      }
+    },
+    {
+      "key": "element.mg",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Magnesium",
+        "short_name": "Mg",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.mg.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.mg"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.024305
+      }
+    },
+    {
+      "key": "element.al",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Aluminium",
+        "short_name": "Al",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.al.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.al"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.026982
+      }
+    },
+    {
+      "key": "element.si",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Silicon",
+        "short_name": "Si",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.si.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.si"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.028085
+      }
+    },
+    {
+      "key": "element.p",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Phosphorus",
+        "short_name": "P",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.p.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.p"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.030974
+      }
+    },
+    {
+      "key": "element.s",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Sulfur",
+        "short_name": "S",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.s.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.s"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.03206
+      }
+    },
+    {
+      "key": "element.cl",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Chlorine",
+        "short_name": "Cl",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cl.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cl"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.03545
+      }
+    },
+    {
+      "key": "element.ar",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Argon",
+        "short_name": "Ar",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ar.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ar"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.03995
+      }
+    },
+    {
+      "key": "element.k",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Potassium",
+        "short_name": "K",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.k.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.k"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.039098
+      }
+    },
+    {
+      "key": "element.ca",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Calcium",
+        "short_name": "Ca",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ca.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ca"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.040078
+      }
+    },
+    {
+      "key": "element.sc",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Scandium",
+        "short_name": "Sc",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sc.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sc"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.044956
+      }
+    },
+    {
+      "key": "element.ti",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Titanium",
+        "short_name": "Ti",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ti.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ti"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.047867
+      }
+    },
+    {
+      "key": "element.v",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Vanadium",
+        "short_name": "V",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.v.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.v"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.050942
+      }
+    },
+    {
+      "key": "element.cr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Chromium",
+        "short_name": "Cr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.051996
+      }
+    },
+    {
+      "key": "element.mn",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Manganese",
+        "short_name": "Mn",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.mn.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.mn"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.054938
+      }
+    },
+    {
+      "key": "element.fe",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Iron",
+        "short_name": "Fe",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.fe.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.fe"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.055845
+      }
+    },
+    {
+      "key": "element.co",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Cobalt",
+        "short_name": "Co",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.co.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.co"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.058933
+      }
+    },
+    {
+      "key": "element.ni",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Nickel",
+        "short_name": "Ni",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ni.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ni"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.058693
+      }
+    },
+    {
+      "key": "element.cu",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Copper",
+        "short_name": "Cu",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cu.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cu"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.063546
+      }
+    },
+    {
+      "key": "element.zn",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Zinc",
+        "short_name": "Zn",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.zn.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.zn"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.06538
+      }
+    },
+    {
+      "key": "element.ga",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Gallium",
+        "short_name": "Ga",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ga.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ga"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.069723
+      }
+    },
+    {
+      "key": "element.ge",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Germanium",
+        "short_name": "Ge",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ge.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ge"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.07263
+      }
+    },
+    {
+      "key": "element.as",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Arsenic",
+        "short_name": "As",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.as.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.as"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.074922
+      }
+    },
+    {
+      "key": "element.se",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Selenium",
+        "short_name": "Se",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.se.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.se"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.078971
+      }
+    },
+    {
+      "key": "element.br",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Bromine",
+        "short_name": "Br",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.br.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.br"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.079904
+      }
+    },
+    {
+      "key": "element.kr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Krypton",
+        "short_name": "Kr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.kr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.kr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.083798
+      }
+    },
+    {
+      "key": "element.rb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Rubidium",
+        "short_name": "Rb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.rb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.rb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.085468
+      }
+    },
+    {
+      "key": "element.sr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Strontium",
+        "short_name": "Sr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.08762
+      }
+    },
+    {
+      "key": "element.y",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Yttrium",
+        "short_name": "Y",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.y.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.y"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.088906
+      }
+    },
+    {
+      "key": "element.zr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Zirconium",
+        "short_name": "Zr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.zr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.zr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.091224
+      }
+    },
+    {
+      "key": "element.nb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Niobium",
+        "short_name": "Nb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.nb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.nb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.092906
+      }
+    },
+    {
+      "key": "element.mo",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Molybdenum",
+        "short_name": "Mo",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.mo.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.mo"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.09595
+      }
+    },
+    {
+      "key": "element.tc",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Technetium",
+        "short_name": "Tc",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.tc.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.tc"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.098
+      }
+    },
+    {
+      "key": "element.ru",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Ruthenium",
+        "short_name": "Ru",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ru.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ru"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.10107
+      }
+    },
+    {
+      "key": "element.rh",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Rhodium",
+        "short_name": "Rh",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.rh.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.rh"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.10291
+      }
+    },
+    {
+      "key": "element.pd",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Palladium",
+        "short_name": "Pd",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pd.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pd"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.10642
+      }
+    },
+    {
+      "key": "element.ag",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Silver",
+        "short_name": "Ag",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ag.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ag"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.10787
+      }
+    },
+    {
+      "key": "element.cd",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Cadmium",
+        "short_name": "Cd",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cd.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cd"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.11241
+      }
+    },
+    {
+      "key": "element.in",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Indium",
+        "short_name": "In",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.in.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.in"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.11482
+      }
+    },
+    {
+      "key": "element.sn",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Tin",
+        "short_name": "Sn",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sn.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sn"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.11871
+      }
+    },
+    {
+      "key": "element.sb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Antimony",
+        "short_name": "Sb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.12176
+      }
+    },
+    {
+      "key": "element.te",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Tellurium",
+        "short_name": "Te",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.te.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.te"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.1276
+      }
+    },
+    {
+      "key": "element.i",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Iodine",
+        "short_name": "I",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.i.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.i"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.1269
+      }
+    },
+    {
+      "key": "element.xe",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Xenon",
+        "short_name": "Xe",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.xe.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.xe"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.13129
+      }
+    },
+    {
+      "key": "element.cs",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Caesium",
+        "short_name": "Cs",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cs.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cs"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.13291
+      }
+    },
+    {
+      "key": "element.ba",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Barium",
+        "short_name": "Ba",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ba.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ba"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.13733
+      }
+    },
+    {
+      "key": "element.la",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Lanthanum",
+        "short_name": "La",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.la.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.la"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.13891
+      }
+    },
+    {
+      "key": "element.ce",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Cerium",
+        "short_name": "Ce",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ce.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ce"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.14012
+      }
+    },
+    {
+      "key": "element.pr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Praseodymium",
+        "short_name": "Pr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.14091
+      }
+    },
+    {
+      "key": "element.nd",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Neodymium",
+        "short_name": "Nd",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.nd.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.nd"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.14424
+      }
+    },
+    {
+      "key": "element.pm",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Promethium",
+        "short_name": "Pm",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pm.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pm"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.145
+      }
+    },
+    {
+      "key": "element.sm",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Samarium",
+        "short_name": "Sm",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sm.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sm"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.15036
+      }
+    },
+    {
+      "key": "element.eu",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Europium",
+        "short_name": "Eu",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.eu.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.eu"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.15196
+      }
+    },
+    {
+      "key": "element.gd",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Gadolinium",
+        "short_name": "Gd",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.gd.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.gd"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.15725
+      }
+    },
+    {
+      "key": "element.tb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Terbium",
+        "short_name": "Tb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.tb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.tb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.15893
+      }
+    },
+    {
+      "key": "element.dy",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Dysprosium",
+        "short_name": "Dy",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.dy.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.dy"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.1625
+      }
+    },
+    {
+      "key": "element.ho",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Holmium",
+        "short_name": "Ho",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ho.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ho"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.16493
+      }
+    },
+    {
+      "key": "element.er",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Erbium",
+        "short_name": "Er",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.er.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.er"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.16726
+      }
+    },
+    {
+      "key": "element.tm",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Thulium",
+        "short_name": "Tm",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.tm.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.tm"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.16893
+      }
+    },
+    {
+      "key": "element.yb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Ytterbium",
+        "short_name": "Yb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.yb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.yb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.17305
+      }
+    },
+    {
+      "key": "element.lu",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Lutetium",
+        "short_name": "Lu",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.lu.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.lu"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.17497
+      }
+    },
+    {
+      "key": "element.hf",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Hafnium",
+        "short_name": "Hf",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.hf.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.hf"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.17849
+      }
+    },
+    {
+      "key": "element.ta",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Tantalum",
+        "short_name": "Ta",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ta.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ta"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.18095
+      }
+    },
+    {
+      "key": "element.w",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Tungsten",
+        "short_name": "W",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.w.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.w"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.18384
+      }
+    },
+    {
+      "key": "element.re",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Rhenium",
+        "short_name": "Re",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.re.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.re"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.18621
+      }
+    },
+    {
+      "key": "element.os",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Osmium",
+        "short_name": "Os",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.os.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.os"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.19023
+      }
+    },
+    {
+      "key": "element.ir",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Iridium",
+        "short_name": "Ir",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ir.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ir"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.19222
+      }
+    },
+    {
+      "key": "element.pt",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Platinum",
+        "short_name": "Pt",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pt.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pt"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.19508
+      }
+    },
+    {
+      "key": "element.au",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Gold",
+        "short_name": "Au",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.au.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.au"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.19697
+      }
+    },
+    {
+      "key": "element.hg",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Mercury",
+        "short_name": "Hg",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.hg.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.hg"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.20059
+      }
+    },
+    {
+      "key": "element.tl",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Thallium",
+        "short_name": "Tl",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.tl.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.tl"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.20438
+      }
+    },
+    {
+      "key": "element.pb",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Lead",
+        "short_name": "Pb",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pb.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pb"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.2072
+      }
+    },
+    {
+      "key": "element.bi",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Bismuth",
+        "short_name": "Bi",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.bi.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.bi"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.20898
+      }
+    },
+    {
+      "key": "element.po",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Polonium",
+        "short_name": "Po",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.po.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.po"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.209
+      }
+    },
+    {
+      "key": "element.at",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Astatine",
+        "short_name": "At",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.at.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.at"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.21
+      }
+    },
+    {
+      "key": "element.rn",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Radon",
+        "short_name": "Rn",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.rn.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.rn"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.222
+      }
+    },
+    {
+      "key": "element.fr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Francium",
+        "short_name": "Fr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.fr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.fr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.223
+      }
+    },
+    {
+      "key": "element.ra",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Radium",
+        "short_name": "Ra",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ra.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ra"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.226
+      }
+    },
+    {
+      "key": "element.ac",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Actinium",
+        "short_name": "Ac",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ac.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ac"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.227
+      }
+    },
+    {
+      "key": "element.th",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Thorium",
+        "short_name": "Th",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.th.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.th"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.23204
+      }
+    },
+    {
+      "key": "element.pa",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Protactinium",
+        "short_name": "Pa",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pa.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pa"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.23104
+      }
+    },
+    {
+      "key": "element.u",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Uranium",
+        "short_name": "U",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.u.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.u"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.23803
+      }
+    },
+    {
+      "key": "element.np",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Neptunium",
+        "short_name": "Np",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.np.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.np"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.237
+      }
+    },
+    {
+      "key": "element.pu",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Plutonium",
+        "short_name": "Pu",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.pu.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.pu"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.244
+      }
+    },
+    {
+      "key": "element.am",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Americium",
+        "short_name": "Am",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.am.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.am"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.243
+      }
+    },
+    {
+      "key": "element.cm",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Curium",
+        "short_name": "Cm",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cm.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cm"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.247
+      }
+    },
+    {
+      "key": "element.bk",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Berkelium",
+        "short_name": "Bk",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.bk.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.bk"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.247
+      }
+    },
+    {
+      "key": "element.cf",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Californium",
+        "short_name": "Cf",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cf.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cf"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.251
+      }
+    },
+    {
+      "key": "element.es",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Einsteinium",
+        "short_name": "Es",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.es.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.es"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.252
+      }
+    },
+    {
+      "key": "element.fm",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Fermium",
+        "short_name": "Fm",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.fm.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.fm"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.257
+      }
+    },
+    {
+      "key": "element.md",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Mendelevium",
+        "short_name": "Md",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.md.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.md"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.258
+      }
+    },
+    {
+      "key": "element.no",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Nobelium",
+        "short_name": "No",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.no.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.no"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.259
+      }
+    },
+    {
+      "key": "element.lr",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Lawrencium",
+        "short_name": "Lr",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.lr.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.lr"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.266
+      }
+    },
+    {
+      "key": "element.rf",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Rutherfordium",
+        "short_name": "Rf",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.rf.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.rf"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.267
+      }
+    },
+    {
+      "key": "element.db",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Dubnium",
+        "short_name": "Db",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.db.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.db"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.268
+      }
+    },
+    {
+      "key": "element.sg",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Seaborgium",
+        "short_name": "Sg",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.sg.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.sg"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.269
+      }
+    },
+    {
+      "key": "element.bh",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Bohrium",
+        "short_name": "Bh",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.bh.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.bh"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.27
+      }
+    },
+    {
+      "key": "element.hs",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Hassium",
+        "short_name": "Hs",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.hs.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.hs"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.269
+      }
+    },
+    {
+      "key": "element.mt",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Meitnerium",
+        "short_name": "Mt",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.mt.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.mt"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.278
+      }
+    },
+    {
+      "key": "element.ds",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Darmstadtium",
+        "short_name": "Ds",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ds.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ds"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.281
+      }
+    },
+    {
+      "key": "element.rg",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Roentgenium",
+        "short_name": "Rg",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.rg.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.rg"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.282
+      }
+    },
+    {
+      "key": "element.cn",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Copernicium",
+        "short_name": "Cn",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.cn.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.cn"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.285
+      }
+    },
+    {
+      "key": "element.nh",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Nihonium",
+        "short_name": "Nh",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.nh.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.nh"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.286
+      }
+    },
+    {
+      "key": "element.fl",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Flerovium",
+        "short_name": "Fl",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.fl.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.fl"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.289
+      }
+    },
+    {
+      "key": "element.mc",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Moscovium",
+        "short_name": "Mc",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.mc.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.mc"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.29
+      }
+    },
+    {
+      "key": "element.lv",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Livermorium",
+        "short_name": "Lv",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.lv.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.lv"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.293
+      }
+    },
+    {
+      "key": "element.ts",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Tennessine",
+        "short_name": "Ts",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.ts.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.ts"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.294
+      }
+    },
+    {
+      "key": "element.og",
+      "model": "ConservedEntity",
+      "fields": {
+        "name": "Oganesson",
+        "short_name": "Og",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        }
+      }
+    },
+    {
+      "key": "element.og.molar-mass",
+      "model": "ConservedEntityConversion",
+      "fields": {
+        "conserved_entity": {
+          "$ref": "poc.elements@1.0.0:element.og"
+        },
+        "from_unit": {
+          "$ref": "poc.units@1.0.0:unit.mol"
+        },
+        "to_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "multiplier": 0.294
+      }
+    }
+  ]
+}
