@@ -1,0 +1,37 @@
+{
+  "name": "poc.steel-goods",
+  "version": "1.0.0",
+  "category": "foundation",
+  "description": "Steel goods: structural steel grades of two industry standards (EN 10025 and ASTM).",
+  "dependencies": [
+    {
+      "name": "poc.core",
+      "version": "1.0.0",
+      "source": "github:RignonNoel/IEODB-package-test-repo/packages/poc.core@1.0.0.json#9c54152bbf2ebae3ca1883bb483667896e056982"
+    }
+  ],
+  "content": [
+    {
+      "key": "good.steel.en-s275",
+      "model": "Good",
+      "fields": {
+        "name": "Structural steel, EN 10025 S275",
+        "description": "Non-alloy structural steel, minimum yield strength 275 MPa (European standard).",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        }
+      }
+    },
+    {
+      "key": "good.steel.astm-a36",
+      "model": "Good",
+      "fields": {
+        "name": "Structural steel, ASTM A36",
+        "description": "Carbon structural steel, minimum yield strength 250 MPa (American standard).",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        }
+      }
+    }
+  ]
+}
