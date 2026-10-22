@@ -1,0 +1,287 @@
+{
+  "name": "poc.market",
+  "version": "1.0.0",
+  "category": "background",
+  "description": "Background data (ecoinvent-like): electricity suppliers and regional electricity markets, as a system graph whose mixes are the flows entering each market node.",
+  "dependencies": [
+    {
+      "name": "poc.core",
+      "version": "1.0.0",
+      "source": "github:RignonNoel/IEODB-package-test-repo/packages/poc.core@1.0.0.json#9c54152bbf2ebae3ca1883bb483667896e056982"
+    }
+  ],
+  "content": [
+    {
+      "key": "supplier.a",
+      "model": "Process",
+      "fields": {
+        "name": "Test electricity supplier A",
+        "metadata": {
+          "technology": "fossil",
+          "geography": "GLO"
+        }
+      }
+    },
+    {
+      "key": "tc.a_out",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.a"
+        },
+        "role": "output",
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "determined_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_property": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "ratio": 1,
+        "order_index": 1,
+        "is_functional": true
+      }
+    },
+    {
+      "key": "supplier.b",
+      "model": "Process",
+      "fields": {
+        "name": "Test electricity supplier B",
+        "metadata": {
+          "technology": "renewable",
+          "geography": "GLO"
+        }
+      }
+    },
+    {
+      "key": "tc.b_out",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.b"
+        },
+        "role": "output",
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "determined_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_property": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "ratio": 1,
+        "order_index": 1,
+        "is_functional": true
+      }
+    },
+    {
+      "key": "tc.a_co2",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.a"
+        },
+        "role": "emission",
+        "determined_flow": {
+          "$ref": "poc.environment@1.0.0:flow.co2.air"
+        },
+        "reference_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_property": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "ratio": 0.5,
+        "order_index": 2,
+        "is_functional": false
+      }
+    },
+    {
+      "key": "tc.b_co2",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.b"
+        },
+        "role": "emission",
+        "determined_flow": {
+          "$ref": "poc.environment@1.0.0:flow.co2.air"
+        },
+        "reference_flow": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "reference_property": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "ratio": 0.1,
+        "order_index": 2,
+        "is_functional": false
+      }
+    },
+    {
+      "key": "system.power",
+      "model": "System",
+      "fields": {
+        "name": "Electricity background",
+        "description": "Electricity suppliers and regional markets"
+      }
+    },
+    {
+      "key": "act.a",
+      "model": "ActivityNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.market@1.0.0:system.power"
+        },
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.a"
+        },
+        "label": "Supplier A"
+      }
+    },
+    {
+      "key": "act.b",
+      "model": "ActivityNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.market@1.0.0:system.power"
+        },
+        "process": {
+          "$ref": "poc.market@1.0.0:supplier.b"
+        },
+        "label": "Supplier B"
+      }
+    },
+    {
+      "key": "market.power.a",
+      "model": "MarketNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.market@1.0.0:system.power"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "label": "Electricity market, region A, 2023",
+        "geography": "REGION-A",
+        "reference_period": "2023"
+      }
+    },
+    {
+      "key": "market.power.b",
+      "model": "MarketNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.market@1.0.0:system.power"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "label": "Electricity market, region B, 2030",
+        "geography": "REGION-B",
+        "reference_period": "2030"
+      }
+    },
+    {
+      "key": "flow.a_to_market_a",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.market@1.0.0:act.a"
+        },
+        "market_node": {
+          "$ref": "poc.market@1.0.0:market.power.a"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "quantity": 0.6,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kwh"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2023"
+      }
+    },
+    {
+      "key": "flow.b_to_market_a",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.market@1.0.0:act.b"
+        },
+        "market_node": {
+          "$ref": "poc.market@1.0.0:market.power.a"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "quantity": 0.4,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kwh"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2023"
+      }
+    },
+    {
+      "key": "flow.a_to_market_b",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.market@1.0.0:act.a"
+        },
+        "market_node": {
+          "$ref": "poc.market@1.0.0:market.power.b"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "quantity": 0.2,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kwh"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2030"
+      }
+    },
+    {
+      "key": "flow.b_to_market_b",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.market@1.0.0:act.b"
+        },
+        "market_node": {
+          "$ref": "poc.market@1.0.0:market.power.b"
+        },
+        "good": {
+          "$ref": "poc.goods@1.0.0:good.power"
+        },
+        "quantity": 0.8,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kwh"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2030"
+      }
+    }
+  ]
+}
