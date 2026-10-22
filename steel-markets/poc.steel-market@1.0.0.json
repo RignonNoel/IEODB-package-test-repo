@@ -1,0 +1,246 @@
+{
+  "name": "poc.steel-market",
+  "version": "1.0.0",
+  "category": "background",
+  "description": "Background data (ecoinvent-like): steel producers and regional steel markets. Region A produces EN 10025 S275 steel, region B only ASTM A36 steel.",
+  "dependencies": [
+    {
+      "name": "poc.core",
+      "version": "1.0.0",
+      "source": "github:RignonNoel/IEODB-package-test-repo/packages/poc.core@1.0.0.json#9c54152bbf2ebae3ca1883bb483667896e056982"
+    },
+    {
+      "name": "poc.steel-goods",
+      "version": "1.0.0",
+      "source": "github:RignonNoel/IEODB-package-test-repo/packages/poc.steel-goods@1.0.0.json#324e9e1d0d3f80a7bdfd94aa2c417109474b576b"
+    }
+  ],
+  "content": [
+    {
+      "key": "steel.en",
+      "model": "Process",
+      "fields": {
+        "name": "Steel production, EN 10025 S275",
+        "metadata": {
+          "geography": "REGION-A",
+          "route": "blast furnace"
+        }
+      }
+    },
+    {
+      "key": "tc.steel_en_out",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.en"
+        },
+        "role": "output",
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "determined_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "reference_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "reference_property": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "ratio": 1,
+        "order_index": 1,
+        "is_functional": true
+      }
+    },
+    {
+      "key": "tc.steel_en_co2",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.en"
+        },
+        "role": "emission",
+        "determined_flow": {
+          "$ref": "poc.environment@1.0.0:flow.co2.air"
+        },
+        "reference_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "reference_property": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "ratio": 1.9,
+        "order_index": 2,
+        "is_functional": false
+      }
+    },
+    {
+      "key": "steel.astm",
+      "model": "Process",
+      "fields": {
+        "name": "Steel production, ASTM A36",
+        "metadata": {
+          "geography": "REGION-B",
+          "route": "blast furnace"
+        }
+      }
+    },
+    {
+      "key": "tc.steel_astm_out",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.astm"
+        },
+        "role": "output",
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "determined_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "reference_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "reference_property": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "ratio": 1,
+        "order_index": 1,
+        "is_functional": true
+      }
+    },
+    {
+      "key": "tc.steel_astm_co2",
+      "model": "TechnicalCoefficient",
+      "fields": {
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.astm"
+        },
+        "role": "emission",
+        "determined_flow": {
+          "$ref": "poc.environment@1.0.0:flow.co2.air"
+        },
+        "reference_flow": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "reference_property": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "ratio": 2.2,
+        "order_index": 2,
+        "is_functional": false
+      }
+    },
+    {
+      "key": "system.steel",
+      "model": "System",
+      "fields": {
+        "name": "Steel background",
+        "description": "Steel producers and regional steel markets"
+      }
+    },
+    {
+      "key": "act.steel.en",
+      "model": "ActivityNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.steel-market@1.0.0:system.steel"
+        },
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.en"
+        },
+        "label": "EN S275 steel producer"
+      }
+    },
+    {
+      "key": "act.steel.astm",
+      "model": "ActivityNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.steel-market@1.0.0:system.steel"
+        },
+        "process": {
+          "$ref": "poc.steel-market@1.0.0:steel.astm"
+        },
+        "label": "ASTM A36 steel producer"
+      }
+    },
+    {
+      "key": "market.steel.a",
+      "model": "MarketNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.steel-market@1.0.0:system.steel"
+        },
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "label": "Steel market (EN S275), region A, 2023",
+        "geography": "REGION-A",
+        "reference_period": "2023"
+      }
+    },
+    {
+      "key": "market.steel.b",
+      "model": "MarketNode",
+      "fields": {
+        "system": {
+          "$ref": "poc.steel-market@1.0.0:system.steel"
+        },
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "label": "Steel market (ASTM A36), region B, 2030",
+        "geography": "REGION-B",
+        "reference_period": "2030"
+      }
+    },
+    {
+      "key": "flow.steel_en_to_market_a",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.steel-market@1.0.0:act.steel.en"
+        },
+        "market_node": {
+          "$ref": "poc.steel-market@1.0.0:market.steel.a"
+        },
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.en-s275"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2023"
+      }
+    },
+    {
+      "key": "flow.steel_astm_to_market_b",
+      "model": "EconomicFlow",
+      "fields": {
+        "activity_node": {
+          "$ref": "poc.steel-market@1.0.0:act.steel.astm"
+        },
+        "market_node": {
+          "$ref": "poc.steel-market@1.0.0:market.steel.b"
+        },
+        "good": {
+          "$ref": "poc.steel-goods@1.0.0:good.steel.astm-a36"
+        },
+        "quantity": 1,
+        "unit": {
+          "$ref": "poc.units@1.0.0:unit.kg"
+        },
+        "direction": "output",
+        "is_primary": true,
+        "is_functionnal": true,
+        "period": "2030"
+      }
+    }
+  ]
+}
