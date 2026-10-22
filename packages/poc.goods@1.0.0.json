@@ -1,0 +1,24 @@
+{
+  "name": "poc.goods",
+  "version": "1.0.0",
+  "category": "foundation",
+  "description": "Common goods shared by background data and reference models.",
+  "dependencies": [
+    {
+      "name": "poc.units",
+      "version": "1.0.0"
+    }
+  ],
+  "content": [
+    {
+      "key": "good.power",
+      "model": "Good",
+      "fields": {
+        "name": "Electricity",
+        "default_unit": {
+          "$ref": "poc.units@1.0.0:unit.kwh"
+        }
+      }
+    }
+  ]
+}
