@@ -1,0 +1,25 @@
+{
+  "name": "poc.core",
+  "version": "1.0.0",
+  "category": "bundle",
+  "description": "Shared foundation bundle: depending on it makes poc.units, poc.elements, poc.environment and poc.goods available. References name the package owning the item.",
+  "dependencies": [
+    {
+      "name": "poc.units",
+      "version": "1.0.0"
+    },
+    {
+      "name": "poc.elements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "poc.environment",
+      "version": "1.0.0"
+    },
+    {
+      "name": "poc.goods",
+      "version": "1.0.0"
+    }
+  ],
+  "content": []
+}
